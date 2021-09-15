@@ -4,6 +4,7 @@ free vehicle for new user
 ## Dependencies
 + [qb-core](https://github.com/qbcore-framework/qb-core)
 + [qb-target](https://github.com/BerkieBb/qb-target)
++ [qb-vehiclekeys](https://github.com/qbcore-framework/qb-vehiclekeys)
 + [nh-context](https://github.com/nerohiro/nh-context)
 
 ## Setup
