@@ -48,9 +48,11 @@ RegisterNetEvent("um-newuservehicle:client:createvehicle",function(data)
         end
         if not check then
             local veh = CreateVehicle(model, -250.183, -996.541, 29.319, 254.58, true, false)
-            SetModelAsNoLongerNeeded(veh) 
+            local plate = GetVehicleNumberPlateText(veh)
+            TriggerEvent("vehiclekeys:client:SetOwner", plate)
             SetPedIntoVehicle(ped, veh, -1)
-            check = true
+            SetVehRadioStation(veh, "OFF")
+            SetModelAsNoLongerNeeded(veh)
         else
            QBCore.Functions.Notify("There is already a vehicle!", "error")
         end
