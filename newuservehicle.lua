@@ -47,7 +47,8 @@ RegisterNetEvent("um-newuservehicle:client:createvehicle",function(data)
             Citizen.Wait(10)
         end
         if not check then
-            local veh = CreateVehicle(model, -250.183, -996.541, 29.319, 254.58, false, true)
+            local veh = CreateVehicle(model, -250.183, -996.541, 29.319, 254.58, true, false)
+            SetModelAsNoLongerNeeded(veh) 
             SetPedIntoVehicle(ped, veh, -1)
             check = true
         else
